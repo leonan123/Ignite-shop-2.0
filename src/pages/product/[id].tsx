@@ -1,8 +1,7 @@
-'use client'
-
 import { useRouter } from 'next/router'
 import {
   ImageContainer,
+  ProductButton,
   ProductContainer,
   ProductDetails
 } from '../../styles/pages/product'
@@ -70,12 +69,14 @@ export default function Product({ product }: ProductProps) {
           <span>{product.price}</span>
           <p>{product.description}</p>
 
-          <button
+          <ProductButton
+            size="lg"
             disabled={isCreatingCheckoutSession}
             onClick={handleBuyProduct}
+            data-target="sidebar"
           >
-            Comprar agora
-          </button>
+            Colocar na sacola
+          </ProductButton>
         </ProductDetails>
       </ProductContainer>
     </>

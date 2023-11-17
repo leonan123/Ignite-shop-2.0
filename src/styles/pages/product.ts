@@ -1,4 +1,5 @@
 import { styled } from '../'
+import { Button } from '../components/button'
 
 export const ProductContainer = styled('main', {
   display: 'grid',
@@ -49,29 +50,10 @@ export const ProductDetails = styled('div', {
     fontSize: '$md',
     lineHeight: 1.6,
     color: '$gray300'
-  },
-
-  button: {
-    marginTop: 'auto',
-    backgroundColor: '$green500',
-    borderRadius: 8,
-    border: 0,
-
-    color: '$white',
-    cursor: 'pointer',
-    padding: '1.25rem',
-
-    fontWeight: 'bold',
-    fontSize: '$md',
-
-    '&:disabled': {
-      opacity: 0.6,
-      cursor: 'not-allowed'
-    },
-
-    '&:not(:disabled):hover': {
-      backgroundColor: '$green300',
-      transition: 'background-color 0.2s'
-    }
   }
+})
+
+export const ProductButton = styled(Button, {
+  marginTop: 'auto',
+  width: '100%'
 })

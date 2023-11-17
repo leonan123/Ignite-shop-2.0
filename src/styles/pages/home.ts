@@ -31,9 +31,9 @@ export const Product = styled('div', {
     left: '0.25rem',
     right: '0.25rem',
 
-    padding: '2rem',
+    padding: '1.25rem',
     borderRadius: 6,
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    backgroundColor: '$gray800',
 
     transform: 'translateY(110%)',
     opacity: 0,
@@ -41,7 +41,13 @@ export const Product = styled('div', {
 
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+
+    ':first-child': {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '0.5rem'
+    }
   },
 
   strong: {

@@ -9,6 +9,8 @@ import { useKeenSlider } from 'keen-slider/react'
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
+import { Handbag } from '@phosphor-icons/react'
+import { Button } from '../styles/components/button'
 
 interface HomeProps {
   products: {
@@ -41,8 +43,19 @@ export default function Home({ products }: HomeProps) {
                 <Image src={product.imageUrl} width={520} height={480} alt="" />
 
                 <footer>
-                  <strong>{product.name}</strong>
-                  <span>{product.price}</span>
+                  <div>
+                    <strong>{product.name}</strong>
+                    <span>{product.price}</span>
+                  </div>
+                  <div>
+                    <Button
+                      size="sm"
+                      aria-label="Adicionar ao carrinho"
+                      data-target="sidebar"
+                    >
+                      <Handbag size={32} weight="bold" />
+                    </Button>
+                  </div>
                 </footer>
               </Product>
             </Link>
