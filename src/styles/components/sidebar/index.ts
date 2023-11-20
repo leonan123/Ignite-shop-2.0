@@ -1,4 +1,3 @@
-import { Button } from './../button'
 import { styled } from '@stitches/react'
 
 export const SidebarContainer = styled('aside', {
@@ -18,6 +17,32 @@ export const SidebarContainer = styled('aside', {
   transform: 'translateX(100%)',
   opacity: 0,
   transition: 'all 0.2s cubic-bezier(.01,.05,.81,.32)',
+
+  scrollbarWidth: 'thin',
+  scrollbarColor: '#121214',
+
+  '*::-webkit-scrollbar': {
+    width: 6,
+    height: 4
+  },
+
+  '*::-webkit-scrollbar-track': {
+    borderRadius: 5,
+    backgroundColor: '#c4c4cc',
+
+    '&:hover': {
+      backgroundColor: '#B8C0C2'
+    }
+  },
+
+  '*::-webkit-scrollbar-thumb': {
+    borderRadius: 5,
+    backgroundColor: '#121214',
+
+    '&:hover': {
+      backgroundColor: 'rgb(12 12 14)'
+    }
+  },
 
   variants: {
     isOpen: {
@@ -57,9 +82,12 @@ export const SidebarItems = styled('ul', {
   listStyle: 'none',
   marginTop: '2rem',
 
+  flex: 1,
   display: 'flex',
   flexDirection: 'column',
-  gap: '1.5rem'
+  gap: '1.5rem',
+
+  overflowY: 'auto'
 })
 
 export const SidebarItem = styled('li', {
@@ -82,6 +110,7 @@ export const SidebarItem = styled('li', {
   'div:last-child': {
     flex: 1,
     height: '100%',
+    paddingRight: '0.5rem',
 
     display: 'flex',
     flexDirection: 'column',
@@ -119,6 +148,7 @@ export const SidebarItem = styled('li', {
 
 export const SidebarFooter = styled('footer', {
   marginTop: 'auto',
+  paddingTop: '0.75rem',
 
   div: {
     display: 'flex',

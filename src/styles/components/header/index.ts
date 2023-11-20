@@ -25,6 +25,7 @@ export const HeaderContainer = styled('header', {
     lineHeight: 'none',
 
     span: {
+      fontSize: '0.85rem',
       position: 'absolute',
       right: '-10px',
       top: '-10px',
@@ -44,6 +45,10 @@ export const HeaderContainer = styled('header', {
 })
 
 export const ButtonCart = styled(Button, {
+  '&:not(disabled):hover': {
+    opacity: 0.6
+  },
+
   variants: {
     empty: {
       true: {
@@ -51,10 +56,14 @@ export const ButtonCart = styled(Button, {
 
         span: {
           visibility: 'hidden'
-        },
+        }
+      },
 
-        '&:hover': {
-          opacity: 0.6
+      false: {
+        opacity: 1,
+
+        span: {
+          visibility: 'visible'
         }
       }
     }
