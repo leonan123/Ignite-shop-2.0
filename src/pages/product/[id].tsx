@@ -7,7 +7,6 @@ import {
 } from '../../styles/pages/product'
 
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { useState } from 'react'
 
 import Image from 'next/image'
 import Head from 'next/head'
