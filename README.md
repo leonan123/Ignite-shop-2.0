@@ -1,6 +1,6 @@
-# 04-Ignite-Shop
+# Ignite-Shop-2.0
 
-Projeto desenvolvido no módulo 4 do curso de react da rocketseat
+This basic e-commerce project was developed as part of a Rocketseat course using Next.js. The challenge of the course was to implement the functionality of a shopping cart, allowing users to add products, view the cart, and complete the purchase.
 
 ## Tecnologias utilizadas
 
