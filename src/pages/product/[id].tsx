@@ -11,13 +11,13 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Image from 'next/image'
 import Head from 'next/head'
 import { useSidebar } from '../../contexts/sidebar/useSidebar'
-import { Product } from '../../entities/product'
+import { Product as TProduct } from '../../entities/product'
 import { retrieveProductService } from '../../services/retrieveProductService'
 import { formatPrice } from '../../helpers/formatPrice'
 import { useCart } from '../../contexts/cart/useCart'
 
 interface ProductProps {
-  product: Product
+  product: TProduct
 }
 
 export default function Product({ product }: ProductProps) {
